@@ -19,8 +19,7 @@ class TestMain(unittest.TestCase):
 
     def test_install(self):
         ph = PluginHelper(category = "category",proj_module_name = 'plugin_helper')
-        print(ph.get_installed_plugins())
-        print(ph.get_available_plugins())
+        print(ph.get_all_plugins())
         plugin_id ='example-plugin-1'
         assert(len(ph.get_available_plugins()) == 1)
         ph.install_plugin(plugin_id)
